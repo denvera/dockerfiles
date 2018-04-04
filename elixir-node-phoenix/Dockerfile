@@ -1,4 +1,4 @@
-FROM elixir:latest
+FROM denver/elxir1.6-erlang19:latest
 
 # Node JS
 RUN groupadd --gid 1000 node \
