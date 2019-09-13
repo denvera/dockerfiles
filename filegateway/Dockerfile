@@ -14,6 +14,6 @@ RUN apt update && \
     chmod 600 /home/fgtest/root && \
     usermod -p fgtest123 fgtest && \
     mkdir -p /home/fgtest/.ssh/ && \
-    chmod 600 /home/fgtest/.ssh/ && \
+    chmod 700 /home/fgtest/.ssh/ && \
     mix local.hex --force && \
     mix local.rebar --force
