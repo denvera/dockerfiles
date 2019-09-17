@@ -3,6 +3,10 @@ FROM elixir:slim
 RUN apt update && \
     apt install -y proftpd openssh-server && \
     mkdir -p /home/ftp && \
+    chown ftp:nogroup /home/ftp && \
+    mkdir /home/ftp/root && \
+    chown root:root /home/ftp/root && \
+    chmod 600 /home/ftp/root && \
     mkdir -p /testshare && \
     chmod 777 /testshare && \
     mkdir -p /var/run/proftpd && \
