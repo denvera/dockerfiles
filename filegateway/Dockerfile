@@ -1,7 +1,7 @@
 FROM elixir:slim
 
 RUN apt update && \
-    apt install -y proftpd openssh-server && \
+    apt install -y proftpd openssh-server git && \
     mkdir -p /home/ftp && \
     chown ftp:nogroup /home/ftp && \
     mkdir /home/ftp/root && \
