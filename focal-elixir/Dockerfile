@@ -1,10 +1,10 @@
 FROM ubuntu:focal
-
+ENV DEBIAN_FRONTEND=noninteractive
 RUN set -xe \
     && apt update \
     && apt-get -y install wget build-essential git locales \
     && wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb \
-    && dpkg -i erlang-solutions_1.0_all.deb
+    && dpkg -i erlang-solutions_2.0_all.deb
 
 
 RUN set -xe \
