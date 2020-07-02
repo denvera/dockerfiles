@@ -22,6 +22,6 @@ RUN apt update && \
     mkdir /s3 && \
     wget https://dl.min.io/server/minio/release/linux-amd64/minio -O /usr/local/bin/minio && \
     wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /usr/local/bin/mc && \
-    chmod +x /usr/local/bin/{minio,mc} && \
+    chmod +x /usr/local/bin/* && \
     mix local.hex --force && \
     mix local.rebar --force
